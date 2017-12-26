@@ -1,0 +1,10 @@
+[include]
+        path = ~/.gitconfig.local
+
+[user]
+        name = Mao Asada
+	email = asdm.dev@gmail.com
+
+[url "github:"]
+        InsteadOf = https://github.com/
+        InsteadOf = git@github.com:
