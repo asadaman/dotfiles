@@ -5,9 +5,8 @@
   name = asadaman
   email = asdm.dev@gmail.com
 
-[url "github:"]
-  InsteadOf = https://github.com/
-  InsteadOf = git@github.com:
+[core]
+  editor = vim
 
 [alias]
   br = branch
