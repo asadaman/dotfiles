@@ -1,44 +1,43 @@
 
-"dein Scripts-----------------------------
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible
+endif
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.vim/dein/repos/github.com/Shougo/dein.vim')
+  call dein#begin('~/.vim/dein/repos/github.com/Shougo/dein.vim')
+
+  call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/neocomplete')
+  call dein#add('Shougo/Unite.vim')
+  call dein#add('Shougo/unite-outline')
+  call dein#add('Shougo/neosnippet')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('kana/vim-operator-user')
+  call dein#add('kana/vim-smartinput')
+  call dein#add('rhysd/vim-operator-surround')
+  call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('tyru/caw.vim.git')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('mxw/vim-jsx')
+
+  call dein#end()
+  call dein#save_state()
 endif
 
-" Required:
-  set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-call dein#begin(expand('~/.vim/dein'))
-
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
-
-" Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/neocomplete')
-call dein#add('Shougo/Unite.vim')
-call dein#add('Shougo/unite-outline')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('kana/vim-operator-user')
-call dein#add('kana/vim-smartinput')
-call dein#add('rhysd/vim-operator-surround')
-call dein#add('nathanaelkane/vim-indent-guides')
-call dein#add('tyru/caw.vim.git')
-call dein#add('scrooloose/nerdtree')
-call dein#add('itchyny/lightline.vim')
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-" You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-" Required:
-call dein#end()
-
-" Required:
 filetype plugin indent on
+syntax enable
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
@@ -46,7 +45,6 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
 
 
 set laststatus=2
