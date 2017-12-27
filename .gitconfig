@@ -1,10 +1,16 @@
 [include]
-        path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 
 [user]
-        name = Mao Asada
-	email = asdm.dev@gmail.com
+  name = asadaman
+  email = asdm.dev@gmail.com
 
 [url "github:"]
-        InsteadOf = https://github.com/
-        InsteadOf = git@github.com:
+  InsteadOf = https://github.com/
+  InsteadOf = git@github.com:
+
+[alias]
+  br = branch
+  co = checkout
+  st = status
+  ci = commit

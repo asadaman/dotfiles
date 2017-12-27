@@ -51,7 +51,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # alias
 alias la="ls -a -l"
 alias ll="ls -l"
-alias v="vim"
+alias v="nvim"
+alias g="git"
 alias fig="docker-compose"
 alias aws-ecr-login='$(aws ecr get-login --registry-ids 716083991437 --no-include-email --region ap-northeast-1)'
 
