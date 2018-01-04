@@ -31,6 +31,7 @@ if dein#load_state('~/.vim/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('itchyny/lightline.vim')
   call dein#add('pangloss/vim-javascript')
   call dein#add('mxw/vim-jsx')
+  call dein#add('slim-template/vim-slim')
 
   call dein#end()
   call dein#save_state()
@@ -58,9 +59,9 @@ set shiftwidth=2
 set softtabstop=2
 
 augroup fileTypeIndent
-    autocmd!
-    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
-    autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd!
+  autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " colorscheme desert
@@ -81,3 +82,4 @@ let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 1
 
 autocmd BufWritePre * :%s/\s\+$//ge
+autocmd BufRead,BufNewFile *.slim setfiletype slim
