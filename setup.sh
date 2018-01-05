@@ -1,4 +1,4 @@
-DOT_FILES=(.zshrc .tmux.conf .vimrc .gitconfig ..gitignore gitignore_global)
+DOT_FILES=(.zshrc .tmux.conf .vimrc .gitconfig .gitignore .gitignore_global)
 
 for file in ${DOT_FILES[@]}
 do
