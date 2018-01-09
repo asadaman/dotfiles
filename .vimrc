@@ -33,6 +33,7 @@ if dein#load_state('~/.vim/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('mxw/vim-jsx')
   call dein#add('slim-template/vim-slim')
   call dein#add('leafgarland/typescript-vim')
+  call dein#add('Quramy/tsuquyomi')
 
   call dein#end()
   call dein#save_state()
