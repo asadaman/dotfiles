@@ -32,6 +32,7 @@ if dein#load_state('~/.vim/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('pangloss/vim-javascript')
   call dein#add('mxw/vim-jsx')
   call dein#add('slim-template/vim-slim')
+  call dein#add('leafgarland/typescript-vim')
 
   call dein#end()
   call dein#save_state()
@@ -84,3 +85,5 @@ let g:indent_guides_guide_size = 1
 
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd BufRead,BufNewFile *.slim setfiletype slim
+autocmd BufRead,BufNewFile *.ts setfiletype typescript
+autocmd BufRead,BufNewFile *.tsx setfiletype typescript
