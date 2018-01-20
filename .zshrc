@@ -1,5 +1,7 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
+export XDG_CONFIG_HOME="$HOME/.config"
+export TERM=xterm-color256
 
 zplug "themes/blinks", from:oh-my-zsh
 
