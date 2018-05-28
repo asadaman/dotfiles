@@ -32,3 +32,5 @@ alias fig="docker-compose"
 alias aws-ecr-login='$(aws ecr get-login --registry-ids 716083991437 --no-include-email --region ap-northeast-1)'
 
 export PATH="/usr/local/opt/opencv3/bin:$PATH"
+
+[[ -s "/Users/200394/.gvm/scripts/gvm" ]] && source "/Users/200394/.gvm/scripts/gvm"

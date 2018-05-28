@@ -40,6 +40,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('leafgarland/typescript-vim')
   call dein#add('Quramy/tsuquyomi')
   call dein#add('mattn/emmet-vim')
+  call dein#add('fatih/vim-go', { 'on_ft': 'go' })
 
   call dein#end()
   call dein#save_state()
@@ -53,7 +54,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-"End dein Scripts-------------------------
+" End dein Scripts-------------------------
 
 
 set laststatus=2
@@ -100,14 +101,14 @@ autocmd BufRead,BufNewFile *.tsx setfiletype typescript
 " setting for denite
 call denite#custom#var('grep', 'command', ['pt'])
 call denite#custom#var('file_rec', 'command', ['pt', '--follow', '--nocolor', '--nogroup', '-g', ''])
-"denite時に使用するキーマップ
-"ESCキーでdeniteを終了
+" denite時に使用するキーマップ
+" ESCキーでdeniteを終了
 call denite#custom#map('insert', '<esc>', '<denite:enter_mode:normal>', 'noremap')
 call denite#custom#map('normal', '<esc>', '<denite:quit>', 'noremap')
-"C-N,C-Pで上下移動
+" C-N,C-Pで上下移動
 call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
 call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-"C-J,C-Kでsplitで開く
+" C-J,C-Kでsplitで開く
 call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
 call denite#custom#map('insert', '<C-k>', '<denite:do_action:vsplit>', 'noremap')
 
@@ -120,9 +121,27 @@ noremap <C-F> :Denite -buffer-name=file file<CR>
 noremap <C-Z> :Denite file_old<CR>
 " カレントディレクトリ
 noremap <C-C> :Denite file_rec<CR>
-"バッファ一覧
+" バッファ一覧
 nnoremap sB :<C-u>Denite buffer -buffer-name=file<CR>
 
-"Denite でバッファ内検索
+" Denite でバッファ内検索
 nnoremap <silent> <Leader><C-f> :<C-u>Denite line<CR>
 nnoremap <silent> <expr><Space>l ":<C-u>DeniteWithCursorWord line<CR>"
+
+" Goの設定
+let g:go_fmt_autosave=1
+let g:go_auto_type_info = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_structs=1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_auto_sameids = 1
+let g:go_fmt_command = 'goimports'
+let g:go_addtags_transform = 'snakecase'
+let g:go_snippet_engine = 'neosnippet'
+let g:go_list_type = 'quickfix'
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'go']
