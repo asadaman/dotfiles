@@ -76,9 +76,7 @@ augroup END
 
 set background=dark
 syntax enable
-" colorscheme desert
-colorscheme molokai
-let g:molokai_original = 1
+colorscheme iceberg
 let g:rehash256 = 1
 autocmd ColorScheme * highlight LineNr ctermfg=172
 
