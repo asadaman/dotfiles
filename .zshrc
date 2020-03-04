@@ -32,16 +32,5 @@ alias ll="ls -l"
 alias v="nvim"
 alias g="git"
 alias fig="docker-compose"
-alias aws-ecr-login='$(aws ecr get-login --registry-ids 716083991437 --no-include-email --region ap-northeast-1)'
 
 export PATH="/usr/local/opt/opencv3/bin:$PATH"
-
-[[ -s "/Users/200394/.gvm/scripts/gvm" ]] && source "/Users/200394/.gvm/scripts/gvm"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/200394/dev/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/200394/dev/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/200394/dev/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/200394/dev/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
